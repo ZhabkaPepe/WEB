@@ -31,12 +31,6 @@ function showModal(dog) {
 closeModal.addEventListener("click", () => {
     myModal.style.display = "none";
 });
-
-window.addEventListener("click", (event) => {
-    if (event.target === myModal) {
-        myModal.style.display = "none";
-    }
-});
 fetch("https://usersdogs.dmytrominochkin.cloud/dogs")
     .then((response) => response.json())
     .then((dogs) => {
